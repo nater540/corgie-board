@@ -1,0 +1,8 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+
+[build]
+target = "thumbv7em-none-eabihf"
+rustflags = ["-C", "link-arg=-Tmemory.x"]
+
+[env]
+DEFMT_LOG = "trace"
